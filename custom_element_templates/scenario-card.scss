@@ -1,0 +1,72 @@
+.row .col .scenario-card-container {
+  .vc_column-inner {
+    overflow-x: scroll;
+    width: 100vw;
+    margin: 0 0 -24px -7%;
+    scroll-snap-type: x mandatory;
+    @media (min-width: $md) {
+      width: 100%;
+      margin: 0;
+      padding-left: 0;
+    }
+    .wpb_wrapper {
+      display: flex;
+      flex-direction: row;
+      white-space: nowrap;
+      margin-bottom: -24px;
+      @media (min-width: $md) {
+        flex-wrap: wrap;
+        margin-left: calc($gutter / 2 * -1);
+        margin-right: calc($gutter / 2 * -1);
+      }
+
+      .scenario-card {
+        scroll-snap-align: start;
+        display: flex;
+        flex: 1 0 auto;
+        width: 100vw;
+        margin-bottom: 24px;
+        max-width: 400px;
+        @media (min-width: $md) {
+          max-width: 1000px;
+          height: auto;
+          flex: 0 0 calc(100%/3);
+        }
+        > div {
+          border: solid 1px $white;
+          border-radius: 40px;
+          padding: 54px 25px 28px 20px;
+          display: flex;
+          flex-grow: 1;
+          flex-direction: column;
+          margin: 0 3.5%;
+          @media (min-width: $md) {
+            margin-right: calc($gutter / 2);
+            margin-left: calc($gutter /2);
+          }
+          h4 {
+            color: $sand;
+            margin-bottom: 30px;
+            text-transform: none;
+          }
+          p {
+            color: $white;
+            margin-bottom: 50px;
+            white-space: wrap;
+          }
+          div {
+            margin-top: auto;
+            display: flex;
+            justify-content: center;
+          }
+          a {
+            color: $sand;
+            &:after {
+              border-color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

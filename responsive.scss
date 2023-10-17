@@ -1,0 +1,299 @@
+@media only screen and (min-width: 1px) and (max-width: 999px){
+
+}
+
+@media only screen and (max-width: 999px) and (min-width: 690px){
+
+}
+
+
+
+@media (min-width: 1440px) and (max-width: 1600px){
+
+
+}
+
+@media (min-width: 1281px) and (max-width: 1440px){
+
+}
+
+
+/*  ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+
+}
+  
+
+/* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px */ 
+@media (min-width: 768px) and (max-width: 1024px) {    
+
+  #logo {
+    vertical-align: middle;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.logo-menu img {
+  width: 26%;
+}
+  
+  
+  .service-box {
+    margin-bottom: 30px !important;
+      }
+
+  .removemobile{ display: none !important;}
+
+  ::-webkit-input-placeholder { /* WebKit browsers */
+    color: #1D252C !important;
+    opacity: 1;
+    font-size: 18px;
+  }
+  
+  span.wpcf7-spinner {
+    position: absolute;
+  }
+  
+  .boton-enviar{
+    padding-bottom: 60px;
+  }
+  
+
+  .imagen-desfasada {
+    margin-top: -110px;
+    max-width: 155px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+// About
+
+.linea1 {
+  width: auto !important;
+  text-align: left;
+  
+    .texto_checkmark1{
+      padding-left: 15px;
+    }
+  
+  }
+  
+
+
+  }
+  
+ 
+  
+/* LANDSCAPES */
+
+/* ##Device = Tablets, Ipads (landscape) ##Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {   
+
+  #logo {
+    vertical-align: middle;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.logo-menu img {
+  width: 26%;
+}
+  
+  
+  .service-box {
+margin-bottom: 30px !important;
+  }
+
+  .removemobile{ display: none !important;}
+
+  ::-webkit-input-placeholder { /* WebKit browsers */
+    color: #1D252C !important;
+    opacity: 1;
+    font-size: 18px;
+  }
+  
+  span.wpcf7-spinner {
+    position: absolute;
+  }
+  
+  .boton-enviar{
+    padding-bottom: 60px;
+  }
+
+  .imagen-desfasada {
+    margin-top: -110px;
+    max-width: 155px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+// About
+
+.linea1 {
+  width: auto !important;
+  text-align: left;
+  
+    .texto_checkmark1{
+      padding-left: 15px;
+    }
+  
+  }
+  
+  
+
+
+}
+  
+  
+/*  ##Device = Low Resolution Tablets, Mobiles (Landscape) ##Screen = B/w 481px to 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  
+  #logo {
+    vertical-align: middle;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.logo-menu img {
+  width: 26%;
+}
+
+  .service-box {
+    margin-bottom: 30px !important;
+      }
+  .removemobile{ display: none !important;}   
+
+  ::-webkit-input-placeholder { /* WebKit browsers */
+    color: #1D252C !important;
+    opacity: 1;
+    font-size: 18px;
+  }
+  
+  span.wpcf7-spinner {
+    position: absolute;
+  }
+  
+  .boton-enviar{
+    padding-bottom: 60px;
+  }
+
+
+  .imagen-desfasada {
+    margin-top: -110px;
+    max-width: 155px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+// About
+
+.linea1 {
+width: auto !important;
+text-align: left;
+
+  .texto_checkmark1{
+    padding-left: 15px;
+  }
+
+}
+
+  
+      
+    
+  }
+/* END LANDSCAPES */
+
+
+
+  
+/*  ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px */
+@media (min-width: 319px) and (max-width: 480px) {
+
+  #logo {
+    vertical-align: middle;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.logo-menu img {
+  width: 38%;
+}
+
+
+  .removemobile{ display: none !important;}
+
+  .imagen-desfasada {
+    margin-top: -70px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 110px;
+}
+
+.service-box{
+  display: block;
+  text-align: center;
+  padding: 74px 29px;
+  margin-bottom: 30px !important;
+
+  .service-box-sec1 {
+    padding-right: 0;
+  }
+}
+
+.contacto-box{
+  height: 955px;
+  padding: 10% 7%;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: #1D252C !important;
+  opacity: 1;
+  font-size: 18px;
+}
+
+span.wpcf7-spinner {
+  position: absolute;
+}
+
+.boton-enviar{
+  padding-bottom: 60px;
+}
+
+//about
+
+.linea1 {
+  width: 328px !important;
+  font-size: 25px !important;
+  line-height: 26px !important;
+  text-align: left;
+}
+
+// services
+
+.centrarmovil{
+
+  h3, h4, p, li{ text-align: center !important;}
+}
+
+.service-img-mobile {
+  width: 49%;
+  margin: 0 auto;
+}
+
+.size60 {
+  font-size: 50px !important;
+  line-height: 59px !important;
+}
+
+
+body .toggle .toggle-title {
+  margin-bottom: 30px !important;
+}
+
+
+} 

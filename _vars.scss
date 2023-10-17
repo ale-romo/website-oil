@@ -1,0 +1,31 @@
+$black: #0F121A;
+$dark:  #4B4B4B;
+$light: #B4B4B4;
+$rosa: #F7DCD1;
+$rojo: #F73B1F;
+$white: #FFFFFF;
+$gold: #635A4D;
+$sand: #DDCEB6;
+$bone: #F1EBE2;
+$red: #D15555;
+$md: 1000px;
+$gutter: 20px;
+
+/* TIPOGRAPHY */
+
+
+@font-face {
+  font-family: "EBGaramond";
+  src: url("/wp-content/themes/salient-child/fonts/EBGaramond.ttf")  format('truetype');
+       font-weight: normal;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: "PP-Telegraf";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/wp-content/themes/salient-child/fonts/pp-telegraf.ttf")  format('truetype'),
+      url("/wp-content/themes/salient-child/fonts/pp-telegraf.woff2") format('woff2');
+}

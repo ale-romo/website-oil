@@ -1,0 +1,17 @@
+@import '../vars';
+
+.row .col .section-title {
+  margin-bottom: 52px;
+  .details {
+    color: $black;
+  }
+  h4 {
+    margin-bottom: 20px;
+    color: $gold;
+    width: 50%;
+    @media (min-width: $md) {
+      margin-bottom: 30px;
+      width: 100%;
+    }
+  }
+}

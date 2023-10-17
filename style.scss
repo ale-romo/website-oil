@@ -1,0 +1,183 @@
+/*
+Theme Name: Salient Child Theme
+Description: This is a custom child theme for Salient
+Theme URI:   https://themeforest.net/item/salient-responsive-multipurpose-theme/4363266
+Author: ThemeNectar
+Author URI:  https://themeforest.net/user/themenectar
+Template: salient
+Version: 1.0
+*/
+@import 'vars';
+
+// Default cleanup
+
+.material .wpb_content_element, .material, .col {
+  margin-bottom: 0;
+}
+body {
+  color: $black!important;
+}
+
+.wpb_wrapper > div {
+  margin-bottom: 0;
+}
+
+body.material {
+  .wpb_row {
+    margin-bottom: 150px;
+    &.full-width-section {
+      margin-bottom: 150px;
+    }
+    &.slim-row {
+      margin-bottom: 0;
+    }
+    .wpb_row {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+.row .col .img {
+  margin-bottom: 0;
+}
+
+ol, ul {
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.inner {
+  img {
+    width: 100%;
+  }
+}
+p {
+  font-family: "EBGaramond";
+  padding-bottom: 0;
+}
+
+
+//General
+h1, h2, h3, h4, h5, h6 {
+  font-family: "PP-Telegraf";
+  line-height: 1em;
+  font-weight: normal;
+  text-wrap: wrap;
+}
+
+h2 {
+  font-size: 46px;
+  text-transform: uppercase;
+  @media (min-width: $md) {
+    font-size: 72px;
+  }
+}
+
+h3 {
+  font-size: 28px;
+  text-transform: uppercase;
+  @media (min-width: $md) {
+    font-size: 48px;
+  }
+}
+
+h4 {
+  text-transform: uppercase;
+  line-height: 1em;
+  font-size: 28px;
+  @media (min-width: $md) {
+    font-size: 36px;
+  }
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: $dark;
+  padding: 0;
+  margin-bottom: 20px;
+  margin-top: 0;
+  width: 100%;
+}
+
+.details, h5 {
+  font-family: "EBGaramond";
+  font-size: 14px;
+}
+
+.regular-button {
+  font-family: "PP-Telegraf";
+  border-radius: 30px;
+  color: $black;
+  display: inline-block;
+  border: solid 1px $sand;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 20px;
+  padding: .25em .7em .25em .9em;
+  @media (min-width: $md) {
+    font-size: 24px;
+  }
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg);
+    border: solid 1px black;
+    border-left: none;
+    border-bottom: none;
+  }
+}
+// helper classes
+
+.centrar {
+  margin: 0 auto;
+}
+
+.color-gold {
+  color: $gold!important;
+  * {
+    color: $gold!important;
+  }
+}
+
+.hidden-md {
+  @media (min-width: $md) {
+    display: none;
+  }
+}
+.visible-md {
+  display: none;
+  @media (min-width: $md) {
+    display: block;
+  }
+}
+
+.light-text * {
+  color: $white!important;
+  border-color: $white!important;
+  &:after, &:before {
+    border-color: $white!important;
+  }
+}
+
+
+// IMAGE GALLERY
+.flickity-viewport {
+  overflow: hidden!important;
+  margin-top: 0!important;
+  margin-bottom: 20px!important;
+  @media (min-width: $md) {
+    margin-bottom: 30px!important;
+  }
+}
+
+@import 'custom_element_templates/case-card';
+@import 'custom_element_templates/service-card';
+@import 'custom_element_templates/scenario-card';
+@import 'custom_element_templates/contact-card';
+@import 'custom_element_templates/footer-card';
+@import 'custom_element_templates/section-title';
+@import 'custom_element_templates/flex-image';

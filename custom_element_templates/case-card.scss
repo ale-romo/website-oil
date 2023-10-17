@@ -1,0 +1,81 @@
+@import '../vars';
+
+.row .col .case-card {
+  margin-bottom: 84px;
+  position: relative;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $md) {
+    margin-bottom: 50px;
+  }
+
+  .details {
+    color: $gold;
+    padding-right: $gutter;
+    @media (min-width: $md) {
+      width: calc(100% / 8);
+    }
+  }
+
+  h2 {
+    color: $black;
+    margin-bottom: 10px;
+    @media (min-width: $md) {
+      margin-bottom: 18px;
+    }
+  }
+  h4 {
+    color: $sand;
+    text-transform: none;
+    margin-bottom: 30px;
+    padding-right: $gutter;
+    @media (min-width: $md) {
+      width: calc(100% / 8 * 3);
+    }
+  }
+
+  p {
+    @media (min-width: $md) {
+      width: calc(100% / 8 * 3.5);
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $md) {
+      flex-direction: row;
+    }
+  }
+
+  .hide_on_large {
+    @media (min-width: $md) {
+      display: none;
+    }
+  }
+  .hover_on_large {
+    @media (min-width: $md) {
+      display: block;
+      position: absolute;
+      width: 50%;
+      height: auto;
+      object-fit: fill;
+      height: auto;
+      opacity: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+  }
+  &:hover {
+    .hover_on_large {
+      @media (min-width: $md) {
+        opacity: 1;
+      }
+    }
+  }
+}
