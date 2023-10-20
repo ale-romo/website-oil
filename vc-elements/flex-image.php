@@ -22,11 +22,12 @@
         'heading' => 'Choose an Image style',
         'param_name' => 'img_style',
         'value' => array(
+            'full' => '',
             '3/7' => 'o-3 w-7',
             '0/10' => 'w-10',
             '2/8' => 'o-2 w-8',
             '2/9' => 'o-2 w-9',
         ),
-    ),
-  )
-);
+      ),
+    )
+  );

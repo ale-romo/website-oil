@@ -188,6 +188,38 @@ hr {
   }
 }
 
+.o-2 {
+  margin-left: 16.6666666667%;
+}
+
+.o-3 {
+  margin-left: 25%;
+}
+
+.w-4 {
+  width: 33.3333333333%;
+}
+
+.w-5 {
+  width: 41.6666666667%;
+}
+
+.w-7 {
+  width: 58.3333333333%;
+}
+
+.w-8 {
+  width: 66.6666666667%;
+}
+
+.w-9 {
+  width: 75%;
+}
+
+.w-10 {
+  width: 83.3333333333%;
+}
+
 /* TIPOGRAPHY */
 @font-face {
   font-family: "EBGaramond";
@@ -656,33 +688,39 @@ hr {
   width: 100%;
 }
 @media (min-width: 1000px) {
-  .row .col .flex-image.o-2 {
-    margin-left: 16.6666666667%;
-  }
-  .row .col .flex-image.o-3 {
-    margin-left: 25%;
-  }
-  .row .col .flex-image.w-7 {
-    width: 58.3333333333%;
-  }
-  .row .col .flex-image.w-8 {
-    width: 66.6666666667%;
-  }
-  .row .col .flex-image.w-9 {
-    width: 75%;
-  }
-  .row .col .flex-image.w-10 {
-    width: 83.3333333333%;
+  .row .col .flex-image img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
   }
 }
-.row .col .flex-image img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-}
-@media (min-width: 1000px) {
+@media (min-width: 1000px) and (min-width: 1000px) {
   .row .col .flex-image img {
     margin-bottom: 30px;
+  }
+}
+
+/* TIPOGRAPHY */
+@font-face {
+  font-family: "EBGaramond";
+  src: url("/wp-content/themes/salient-child/fonts/EBGaramond.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PP-Telegraf";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/wp-content/themes/salient-child/fonts/pp-telegraf.ttf") format("truetype"), url("/wp-content/themes/salient-child/fonts/pp-telegraf.woff2") format("woff2");
+}
+.row .col .paragraphs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1000px) {
+  .row .col .paragraphs {
+    flex-direction: row;
   }
 }
 
