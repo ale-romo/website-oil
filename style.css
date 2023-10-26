@@ -96,6 +96,7 @@ h3 {
 }
 
 h4 {
+  text-transform: uppercase;
   line-height: 1em;
   font-size: 28px;
 }
@@ -120,7 +121,7 @@ hr {
   font-size: 14px;
 }
 
-.regular-button {
+.regular-button, .nectar-button.large {
   font-family: "PP-Telegraf";
   border-radius: 30px;
   color: #0F121A;
@@ -133,11 +134,11 @@ hr {
   transition: all 0.2s ease;
 }
 @media (min-width: 1000px) {
-  .regular-button {
+  .regular-button, .nectar-button.large {
     font-size: 24px;
   }
 }
-.regular-button:after {
+.regular-button:after, .nectar-button.large:after {
   content: "";
   display: inline-block;
   width: 15px;
@@ -150,11 +151,11 @@ hr {
   position: relative;
 }
 
-.regular-button:hover {
+.regular-button:hover, .nectar-button.large:hover {
   background-color: #635A4D;
   color: #F1EBE2;
 }
-.regular-button:hover:after {
+.regular-button:hover:after, .nectar-button.large:hover:after {
   left: 2px;
   border: 1px solid #F1EBE2;
   border-left: none;
@@ -652,6 +653,7 @@ hr {
   color: #0F121A;
 }
 .row .col .section-title h4 {
+  text-transform: none;
   margin-bottom: 20px;
   color: #635A4D;
   width: 50%;

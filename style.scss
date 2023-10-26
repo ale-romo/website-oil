@@ -85,7 +85,7 @@ h3 {
 }
 
 h4 {
- // text-transform: uppercase;
+  text-transform: uppercase;
   line-height: 1em;
   font-size: 28px;
   @media (min-width: $md) {
@@ -108,7 +108,7 @@ hr {
   font-size: 14px;
 }
 
-.regular-button {
+.regular-button, .nectar-button.large  {
   font-family: "PP-Telegraf";
   border-radius: 30px;
   color: $black;
@@ -138,7 +138,7 @@ hr {
 }
 
 
-.regular-button:hover{
+.regular-button:hover , .nectar-button.large:hover{
 background-color: $gold;
 color: $bone;
 &:after {
