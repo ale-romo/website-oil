@@ -310,6 +310,11 @@ hr {
   margin: 0 0 -24px -7%;
   scroll-snap-type: x mandatory;
 }
+@media (max-width: .row .col .service-card-container .vc_column-inner md) {
+  .row .col .service-card-container .vc_column-inner {
+    overflow-x: scroll;
+  }
+}
 @media (min-width: 1000px) {
   .row .col .service-card-container .vc_column-inner {
     width: 100%;
