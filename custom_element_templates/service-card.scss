@@ -1,10 +1,10 @@
 .row .col .service-card-container {
   .vc_column-inner {
-    
+
     width: 100vw;
     margin: 0 0 -24px -7%;
     scroll-snap-type: x mandatory;
-    @media (max-width: &md) {
+    @media (max-width: $md) {
       overflow-x: scroll;
     }
     @media (min-width: $md) {
