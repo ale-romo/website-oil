@@ -62,8 +62,10 @@
             border-left: 0;
             border-bottom: 0;
             margin-top: 5px;
+            position: relative;
           }
         }
+
         ul {
           display: flex;
           padding: 0 20px 0;
@@ -76,6 +78,10 @@
             }
           }
         }
+      }
+
+      .footer-card > a:hover:after{
+        left: 2px; 
       }
     }
   }

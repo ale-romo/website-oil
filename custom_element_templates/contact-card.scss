@@ -13,8 +13,9 @@
       @media (min-width: $md) {
         width: 40%;
         margin-bottom: 50px;
+        margin-left: 10%;
         &:nth-child(2n) {
-          margin-left: 10%;
+         
         }
       }
       h3 {
