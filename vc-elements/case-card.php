@@ -50,6 +50,6 @@
             'Hover on large' => 'hover_on_large',
         ),
         'description' => 'Choose one of the three options.',
-    ),
-  )
-);
+      ),
+    )
+  );

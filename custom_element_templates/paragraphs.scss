@@ -1,0 +1,10 @@
+@import '../vars';
+
+.row .col .paragraphs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $md) {
+    flex-direction: row;
+  }
+}

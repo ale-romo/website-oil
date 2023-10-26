@@ -201,6 +201,32 @@ color: $bone;
   }
 }
 
+// $md+  responsive layouts
+.o-2 {
+  margin-left: calc(100% / 12 * 2);
+}
+.o-3 {
+  margin-left: calc(100% / 12 * 3);
+}
+.w-4 {
+  width: calc(100% /12 *4);
+}
+.w-5 {
+  width: calc(100% /12 *5);
+}
+.w-7 {
+  width: calc(100% /12 *7);
+}
+.w-8 {
+  width: calc(100% /12 *8);
+}
+.w-9 {
+  width: calc(100% /12 *9);
+}
+.w-10 {
+  width: calc(100% /12 *10);
+}
+
 @import 'custom_element_templates/case-card';
 @import 'custom_element_templates/service-card';
 @import 'custom_element_templates/scenario-card';
@@ -208,3 +234,4 @@ color: $bone;
 @import 'custom_element_templates/footer-card';
 @import 'custom_element_templates/section-title';
 @import 'custom_element_templates/flex-image';
+@import 'custom_element_templates/paragraphs';

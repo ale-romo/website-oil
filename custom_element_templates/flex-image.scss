@@ -3,31 +3,13 @@
 .row .col .flex-image {
   width: 100%;
   @media (min-width: $md) {
-    &.o-2 {
-      margin-left: calc(100% / 12 * 2);
-    }
-    &.o-3 {
-      margin-left: calc(100% / 12 * 3);
-    }
-    &.w-7 {
-      width: calc(100% /12 *7);
-    }
-    &.w-8{
-      width: calc(100% /12 *8);
-    }
-    &.w-9{
-      width: calc(100% /12 *9);
-    }
-    &.w-10 {
-      width: calc(100% /12 *10);
-    }
-  }
-  img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    @media (min-width: $md) {
-      margin-bottom: 30px;
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      @media (min-width: $md) {
+        margin-bottom: 30px;
+      }
     }
   }
 }
