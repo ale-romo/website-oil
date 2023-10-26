@@ -20,6 +20,10 @@ Version: 1.0
   font-style: normal;
   src: url("/wp-content/themes/salient-child/fonts/pp-telegraf.ttf") format("truetype"), url("/wp-content/themes/salient-child/fonts/pp-telegraf.woff2") format("woff2");
 }
+#to-top, .heading-title {
+  display: none;
+}
+
 .material .wpb_content_element, .material, .col {
   margin-bottom: 0;
 }
@@ -92,7 +96,6 @@ h3 {
 }
 
 h4 {
-  text-transform: uppercase;
   line-height: 1em;
   font-size: 28px;
 }
@@ -105,7 +108,7 @@ h4 {
 hr {
   border: none;
   height: 1px;
-  background-color: #4B4B4B;
+  background-color: #B4B4B4;
   padding: 0;
   margin-bottom: 20px;
   margin-top: 0;
@@ -126,7 +129,8 @@ hr {
   text-transform: uppercase;
   font-weight: normal;
   font-size: 20px;
-  padding: 0.25em 0.7em 0.25em 0.9em;
+  padding: 0.25em 0.7em 0.29em 0.9em;
+  transition: all 0.2s ease;
 }
 @media (min-width: 1000px) {
   .regular-button {
@@ -142,6 +146,23 @@ hr {
   border: solid 1px black;
   border-left: none;
   border-bottom: none;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.regular-button:hover {
+  background-color: #635A4D;
+  color: #F1EBE2;
+}
+.regular-button:hover:after {
+  left: 2px;
+  border: 1px solid #F1EBE2;
+  border-left: none;
+  border-bottom: none;
+}
+
+.home-footer .regular-button {
+  padding: 0.5em 1.1em 0.5em 1.1em;
 }
 
 .centrar {
@@ -285,7 +306,6 @@ hr {
 }
 
 .row .col .service-card-container .vc_column-inner {
-  overflow-x: scroll;
   width: 100vw;
   margin: 0 0 -24px -7%;
   scroll-snap-type: x mandatory;
@@ -343,13 +363,13 @@ hr {
   margin-bottom: 30px;
 }
 .row .col .service-card-container .vc_column-inner .wpb_wrapper .service-card > div p {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   white-space: wrap;
 }
 .row .col .service-card-container .vc_column-inner .wpb_wrapper .service-card > div img {
-  height: 270px;
+  height: 180px;
   width: auto;
-  margin-bottom: 33px;
+  margin-bottom: 69px;
 }
 .row .col .service-card-container .vc_column-inner .wpb_wrapper .service-card > div div {
   margin-top: auto;
@@ -466,8 +486,6 @@ hr {
   .contact-container .wpb_wrapper .contact-card {
     width: 40%;
     margin-bottom: 50px;
-  }
-  .contact-container .wpb_wrapper .contact-card:nth-child(2n) {
     margin-left: 10%;
   }
 }
@@ -596,6 +614,7 @@ hr {
   border-left: 0;
   border-bottom: 0;
   margin-top: 5px;
+  position: relative;
 }
 .footer-container .column_container .wpb_wrapper .footer-card ul {
   display: flex;
@@ -608,6 +627,9 @@ hr {
 }
 .footer-container .column_container .wpb_wrapper .footer-card ul li img {
   margin-bottom: 0;
+}
+.footer-container .column_container .wpb_wrapper .footer-card > a:hover:after {
+  left: 2px;
 }
 
 /* TIPOGRAPHY */

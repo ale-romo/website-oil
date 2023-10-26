@@ -10,6 +10,7 @@ Version: 1.0
 @import 'vars';
 
 // Default cleanup
+#to-top, .heading-title{ display: none;}
 
 .material .wpb_content_element, .material, .col {
   margin-bottom: 0;
@@ -84,7 +85,7 @@ h3 {
 }
 
 h4 {
-  text-transform: uppercase;
+ // text-transform: uppercase;
   line-height: 1em;
   font-size: 28px;
   @media (min-width: $md) {
@@ -95,7 +96,7 @@ h4 {
 hr {
   border: none;
   height: 1px;
-  background-color: $dark;
+  background-color: $light;
   padding: 0;
   margin-bottom: 20px;
   margin-top: 0;
@@ -116,8 +117,10 @@ hr {
   text-transform: uppercase;
   font-weight: normal;
   font-size: 20px;
-  padding: .25em .7em .25em .9em;
-  @media (min-width: $md) {
+  padding: .25em .7em .29em .9em;
+  // padding: 0.6em 1.1em 0.6em 1.1em;
+  transition: all 0.2s ease;
+@media (min-width: $md) {
     font-size: 24px;
   }
   &:after {
@@ -129,7 +132,25 @@ hr {
     border: solid 1px black;
     border-left: none;
     border-bottom: none;
+    transition: all 0.2s ease;
+    position: relative;
   }
+}
+
+
+.regular-button:hover{
+background-color: $gold;
+color: $bone;
+&:after {
+  left: 2px;
+  border: 1px solid $bone;
+  border-left: none;
+  border-bottom: none;
+}
+}
+
+.home-footer .regular-button{
+  padding: 0.5em 1.1em 0.5em 1.1em;
 }
 // helper classes
 
