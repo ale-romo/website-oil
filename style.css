@@ -24,6 +24,10 @@ Version: 1.0
   display: none;
 }
 
+body[data-ext-responsive=true].single-post .container-wrap.no-sidebar .post-area {
+  max-width: none;
+}
+
 .material .wpb_content_element, .material, .col {
   margin-bottom: 0;
 }
@@ -36,16 +40,16 @@ body {
   margin-bottom: 0;
 }
 
-body.material .wpb_row {
+body.material .wpb_row, body.material #ajax-content-wrap .wpb_row.has-global-section, body.material .container-wrap .row > .wpb_row:last-child {
   margin-bottom: 150px;
 }
-body.material .wpb_row.full-width-section {
+body.material .wpb_row.full-width-section, body.material #ajax-content-wrap .wpb_row.has-global-section.full-width-section, body.material .container-wrap .row > .wpb_row:last-child.full-width-section {
   margin-bottom: 150px;
 }
-body.material .wpb_row.slim-row {
+body.material .wpb_row.slim-row, body.material #ajax-content-wrap .wpb_row.has-global-section.slim-row, body.material .container-wrap .row > .wpb_row:last-child.slim-row {
   margin-bottom: 0;
 }
-body.material .wpb_row .wpb_row {
+body.material .wpb_row .wpb_row, body.material #ajax-content-wrap .wpb_row.has-global-section .wpb_row, body.material .container-wrap .row > .wpb_row:last-child .wpb_row {
   margin-bottom: 0;
 }
 
@@ -95,7 +99,6 @@ h3 {
 }
 
 h4 {
-  text-transform: uppercase;
   line-height: 1em;
   font-size: 28px;
 }
@@ -365,6 +368,7 @@ hr {
   }
 }
 .row .col .service-card-container .vc_column-inner .wpb_wrapper .service-card > div h4 {
+  text-transform: uppercase;
   margin-bottom: 30px;
 }
 .row .col .service-card-container .vc_column-inner .wpb_wrapper .service-card > div p {

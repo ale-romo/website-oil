@@ -12,6 +12,10 @@ Version: 1.0
 // Default cleanup
 #to-top, .heading-title{ display: none;}
 
+body[data-ext-responsive=true].single-post .container-wrap.no-sidebar .post-area{
+  max-width: none;
+}
+
 .material .wpb_content_element, .material, .col {
   margin-bottom: 0;
 }
@@ -26,7 +30,7 @@ body {
 }
 
 body.material {
-  .wpb_row {
+  .wpb_row, #ajax-content-wrap .wpb_row.has-global-section, .container-wrap .row>.wpb_row:last-child {
     margin-bottom: 150px;
     &.full-width-section {
       margin-bottom: 150px;
@@ -86,7 +90,7 @@ h3 {
 }
 
 h4 {
-  text-transform: uppercase;
+  //text-transform: uppercase;
   line-height: 1em;
   font-size: 28px;
   @media (min-width: $md) {
