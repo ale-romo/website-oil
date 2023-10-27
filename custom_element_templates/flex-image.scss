@@ -1,7 +1,9 @@
 @import '../vars';
 
 .row .col .flex-image {
-  width: 100%;
+  @media (max-width: $md) {
+    width: 100%;
+  }
   @media (min-width: $md) {
     img {
       width: 100%;

@@ -373,7 +373,7 @@ hr {
   margin-bottom: 30px;
 }
 .row .col .service-card-container .vc_column-inner .wpb_wrapper .service-card > div p {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   white-space: wrap;
 }
 .row .col .service-card-container .vc_column-inner .wpb_wrapper .service-card > div img {
@@ -684,8 +684,10 @@ hr {
   font-style: normal;
   src: url("/wp-content/themes/salient-child/fonts/pp-telegraf.ttf") format("truetype"), url("/wp-content/themes/salient-child/fonts/pp-telegraf.woff2") format("woff2");
 }
-.row .col .flex-image {
-  width: 100%;
+@media (max-width: 1000px) {
+  .row .col .flex-image {
+    width: 100%;
+  }
 }
 @media (min-width: 1000px) {
   .row .col .flex-image img {
@@ -698,9 +700,7 @@ hr {
   .row .col .flex-image img {
     margin-bottom: 30px;
   }
-}
-
-/* TIPOGRAPHY */
+} /* TIPOGRAPHY */
 @font-face {
   font-family: "EBGaramond";
   src: url("/wp-content/themes/salient-child/fonts/EBGaramond.ttf") format("truetype");
@@ -721,6 +721,7 @@ hr {
 @media (min-width: 1000px) {
   .row .col .paragraphs {
     flex-direction: row;
+    align-items: center;
   }
 }
 
