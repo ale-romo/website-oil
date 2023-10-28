@@ -213,6 +213,24 @@ hr {
   }
 }
 
+.row .col .flick-gallery img {
+  height: 150px;
+  width: auto;
+  margin: 0 auto;
+}
+
+.row .col .fade-gallery {
+  position: relative;
+}
+.row .col .fade-gallery img {
+  height: 80px;
+  width: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .o-2 {
   margin-left: 16.6666666667%;
 }
@@ -341,18 +359,13 @@ hr {
 
 .row .col .service-card-container .vc_column-inner {
   width: 100vw;
-  margin: 0 0 -24px -7%;
+  margin: 0 0 0 -7%;
   scroll-snap-type: x mandatory;
-}
-@media (max-width: 1000px) {
-  .row .col .service-card-container .vc_column-inner {
-    overflow-x: scroll;
-  }
+  overflow-x: scroll;
 }
 @media (min-width: 1000px) {
   .row .col .service-card-container .vc_column-inner {
     width: 100%;
-    margin: 0;
     padding-left: 0;
   }
 }
@@ -364,8 +377,10 @@ hr {
 @media (min-width: 1000px) {
   .row .col .service-card-container .vc_column-inner .wpb_wrapper {
     flex-wrap: wrap;
+    row-gap: 20px;
     margin-left: -10px;
     margin-right: -10px;
+    width: 100%;
   }
 }
 .row .col .service-card-container .vc_column-inner .wpb_wrapper .service-card {
@@ -373,7 +388,6 @@ hr {
   display: flex;
   flex: 1 0 auto;
   width: 100vw;
-  margin-bottom: 24px;
   max-width: 400px;
 }
 @media (min-width: 1000px) {
@@ -420,7 +434,7 @@ hr {
 .row .col .scenario-card-container .vc_column-inner {
   overflow-x: scroll;
   width: 100vw;
-  margin: 0 0 -24px -7%;
+  margin: 0 0 0 -7%;
   scroll-snap-type: x mandatory;
 }
 @media (min-width: 1000px) {
@@ -434,11 +448,12 @@ hr {
   display: flex;
   flex-direction: row;
   white-space: nowrap;
-  margin-bottom: -24px;
+  width: 100%;
 }
 @media (min-width: 1000px) {
   .row .col .scenario-card-container .vc_column-inner .wpb_wrapper {
     flex-wrap: wrap;
+    row-gap: 20px;
     margin-left: -10px;
     margin-right: -10px;
   }
@@ -448,7 +463,6 @@ hr {
   display: flex;
   flex: 1 0 auto;
   width: 100vw;
-  margin-bottom: 24px;
   max-width: 400px;
 }
 @media (min-width: 1000px) {
