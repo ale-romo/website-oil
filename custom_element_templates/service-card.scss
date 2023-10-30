@@ -1,6 +1,41 @@
-.row .col .service-card-container {
-  .vc_column-inner {
+@import '../vars';
 
+.row .col .service-card-container {
+  .cardCounter {
+    color: black;
+    display: flex;
+    justify-content: flex-end;
+    font-family: "PP-Telegraf";
+    @media (min-width: $md) {
+      display: none;
+    }
+
+    div {
+      position: relative;
+      padding: 25px 0 12px;
+      white-space: pre;
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+        background-color: $light;
+        left: 0;
+      }
+    }
+
+    span {
+      width: calc(100% /3);
+      height: 1px;
+      background-color: $black;
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  .vc_column-inner {
     width: 100vw;
     margin: 0 0 0 -7%;
     scroll-snap-type: x mandatory;
@@ -12,7 +47,6 @@
     .wpb_wrapper {
       display: flex;
       flex-direction: row;
-      white-space: nowrap;
       @media (min-width: $md) {
         flex-wrap: wrap;
         row-gap: 20px;

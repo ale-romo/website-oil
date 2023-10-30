@@ -1,18 +1,34 @@
 .row .col .scenario-card-container {
+  .cardCounter {
+    color: white;
+    padding: 25px 0;
+    text-align: right;
+    font-family: "PP-Telegraf";
+    white-space: pre;
+    @media (min-width: $md) {
+      display: none;
+    }
+  }
   .vc_column-inner {
     overflow-x: scroll;
     width: 100vw;
     margin: 0 0 0 -7%;
     scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;  /* IE 11+ */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
     @media (min-width: $md) {
       width: 100%;
       margin: 0;
       padding-left: 0;
     }
+
     .wpb_wrapper {
       display: flex;
       flex-direction: row;
-      white-space: nowrap;
       width: 100%;
       @media (min-width: $md) {
         flex-wrap: wrap;
