@@ -195,13 +195,31 @@ color: $bone;
 }
 
 
-// IMAGE GALLERY
+// IMAGE GALLERIES
 .flickity-viewport {
   overflow: hidden!important;
   margin-top: 0!important;
   margin-bottom: 20px!important;
   @media (min-width: $md) {
     margin-bottom: 30px!important;
+  }
+}
+
+.row .col .flick-gallery img {
+  height: 150px;
+  width: auto;
+  margin: 0 auto;
+}
+
+.row .col .fade-gallery {
+  position: relative;
+  img {
+    height: 80px;
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 

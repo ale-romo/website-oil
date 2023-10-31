@@ -32,6 +32,7 @@
             'Large' => 'o-2 w-5',
         ),
         'description' => 'Choose one of the two options.',
+        'std' => 'Small',
       )
     )
   );

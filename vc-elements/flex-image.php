@@ -20,7 +20,7 @@
       array(
         'type' => 'dropdown',
         'heading' => 'Choose an Image style',
-        'param_name' => 'img_style',
+        'param_name' => 'img_layout',
         'value' => array(
             'full' => '',
             '3/7' => 'o-3 w-7',
@@ -28,6 +28,7 @@
             '2/8' => 'o-2 w-8',
             '2/9' => 'o-2 w-9',
         ),
+        'std' => 'full',
       ),
     )
   );
