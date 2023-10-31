@@ -10,7 +10,11 @@ Version: 1.0
 @import 'vars';
 
 // Default cleanup
-#to-top, .heading-title{ display: none;}
+#to-top, .heading-title, #all-items{ display: none;}
+
+.bottom_controls {
+  background-color: rgba(0,0,0,0);
+}
 
 body[data-ext-responsive=true].single-post .container-wrap.no-sidebar .post-area{
   max-width: none;
@@ -30,7 +34,7 @@ body {
 }
 
 body.material {
-  .wpb_row, #ajax-content-wrap .wpb_row.has-global-section, .container-wrap .row>.wpb_row:last-child {
+  .wpb_row, #ajax-content-wrap .wpb_row.has-global-section, .container-wrap .row>.wpb_row:last-child, body.material .wpb_row.slim-row {
     margin-bottom: 150px;
     &.full-width-section {
       margin-bottom: 150px;
