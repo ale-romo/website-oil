@@ -20,8 +20,12 @@ Version: 1.0
   font-style: normal;
   src: url("/wp-content/themes/salient-child/fonts/pp-telegraf.ttf") format("truetype"), url("/wp-content/themes/salient-child/fonts/pp-telegraf.woff2") format("woff2");
 }
-#to-top, .heading-title {
+#to-top, .heading-title, #all-items {
   display: none;
+}
+
+.bottom_controls {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 body[data-ext-responsive=true].single-post .container-wrap.no-sidebar .post-area {
@@ -40,16 +44,16 @@ body {
   margin-bottom: 0;
 }
 
-body.material .wpb_row, body.material #ajax-content-wrap .wpb_row.has-global-section, body.material .container-wrap .row > .wpb_row:last-child {
+body.material .wpb_row, body.material #ajax-content-wrap .wpb_row.has-global-section, body.material .container-wrap .row > .wpb_row:last-child, body.material body.material .wpb_row.slim-row {
   margin-bottom: 150px;
 }
-body.material .wpb_row.full-width-section, body.material #ajax-content-wrap .wpb_row.has-global-section.full-width-section, body.material .container-wrap .row > .wpb_row:last-child.full-width-section {
+body.material .wpb_row.full-width-section, body.material #ajax-content-wrap .wpb_row.has-global-section.full-width-section, body.material .container-wrap .row > .wpb_row:last-child.full-width-section, body.material body.material .wpb_row.slim-row.full-width-section {
   margin-bottom: 150px;
 }
-body.material .wpb_row.slim-row, body.material #ajax-content-wrap .wpb_row.has-global-section.slim-row, body.material .container-wrap .row > .wpb_row:last-child.slim-row {
+body.material .wpb_row.slim-row, body.material #ajax-content-wrap .wpb_row.has-global-section.slim-row, body.material .container-wrap .row > .wpb_row:last-child.slim-row, body.material body.material .wpb_row.slim-row.slim-row {
   margin-bottom: 0;
 }
-body.material .wpb_row .wpb_row, body.material #ajax-content-wrap .wpb_row.has-global-section .wpb_row, body.material .container-wrap .row > .wpb_row:last-child .wpb_row {
+body.material .wpb_row .wpb_row, body.material #ajax-content-wrap .wpb_row.has-global-section .wpb_row, body.material .container-wrap .row > .wpb_row:last-child .wpb_row, body.material body.material .wpb_row.slim-row .wpb_row {
   margin-bottom: 0;
 }
 
