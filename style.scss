@@ -40,6 +40,12 @@ body.material {
       margin-bottom: 150px;
     }
     &.slim-row {
+      margin-bottom: 20px;
+      @media (min-width: $md) {
+        margin-bottom: 30px;
+      }
+    }
+    &.nomargin-row {
       margin-bottom: 0;
     }
     .wpb_row {
