@@ -24,9 +24,24 @@ body[data-ext-responsive=true].single-post .container-wrap.no-sidebar .post-area
   margin-bottom: 0;
 }
 
-body {
-  color: $black!important;
 
+nav, #header-outer.transparent.dark-slide > #top nav > ul > li > a {
+  mix-blend-mode:difference !important;
+}
+
+
+.single-post{
+  background-color: red;
+ }
+
+body {
+  cursor: url('cursors/c_circle.svg'), auto;
+  a{
+    cursor: url('cursors/c_line.svg'), auto;
+  }
+  .flickity-prev-next-button, .flickity-enabled.is-draggable .flickity-viewport, #portfolio-nav #prev-link a, #portfolio-nav #next-link a  { 
+    cursor: url('cursors/c_triangle.svg'), auto;
+  }
 }
 
 .wpb_wrapper > div {
@@ -144,19 +159,18 @@ hr {
     transition: all 0.2s ease;
     position: relative;
   }
+  &:hover{
+    background-color: $bone;
+    //color: $bone;
+    &:after{
+      left: 2px;
+     // border: 1px solid $bone;
+      border-left: none;
+      border-bottom: none;
+    }
+  }
 }
 
-
-.regular-button:hover , .nectar-button.large:hover{
-background-color: $gold;
-color: $bone;
-&:after {
-  left: 2px;
-  border: 1px solid $bone;
-  border-left: none;
-  border-bottom: none;
-}
-}
 
 .home-footer .regular-button{
   padding: 0.5em 1.1em 0.5em 1.1em;

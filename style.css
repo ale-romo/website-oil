@@ -36,8 +36,22 @@ body[data-ext-responsive=true].single-post .container-wrap.no-sidebar .post-area
   margin-bottom: 0;
 }
 
+nav, #header-outer.transparent.dark-slide > #top nav > ul > li > a {
+  mix-blend-mode: difference !important;
+}
+
+.single-post {
+  background-color: red;
+}
+
 body {
-  color: #0F121A !important;
+  cursor: url("cursors/c_circle.svg"), auto;
+}
+body a {
+  cursor: url("cursors/c_line.svg"), auto;
+}
+body .flickity-prev-next-button, body .flickity-enabled.is-draggable .flickity-viewport, body #portfolio-nav #prev-link a, body #portfolio-nav #next-link a {
+  cursor: url("cursors/c_triangle.svg"), auto;
 }
 
 .wpb_wrapper > div {
@@ -156,14 +170,11 @@ hr {
   transition: all 0.2s ease;
   position: relative;
 }
-
 .regular-button:hover, .nectar-button.large:hover {
-  background-color: #635A4D;
-  color: #F1EBE2;
+  background-color: #F1EBE2;
 }
 .regular-button:hover:after, .nectar-button.large:hover:after {
   left: 2px;
-  border: 1px solid #F1EBE2;
   border-left: none;
   border-bottom: none;
 }
