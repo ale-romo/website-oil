@@ -63,7 +63,7 @@ const setGalleryUp = (galleryId) => {
         // Throttle the scroll event to run once every 300 milliseconds
         window.addEventListener('scroll', throttle(flickerImage, 150));
     } else if (galleryId === 'fade-gallery') {
-        const handleMouseMove = debounce((event) => {
+        const handleMouseMove = throttle((event) => {
             const xPosition = event.clientX;
             const windowWidth = window.innerWidth;
             const imgToShow = Math.floor((xPosition / windowWidth) * galleryPics.length);
@@ -75,7 +75,7 @@ const setGalleryUp = (galleryId) => {
                     img.style.opacity = 0;
                 }
             });
-        }, 100);
+        }, 150);
 
         document.addEventListener('mousemove', handleMouseMove);
     }
