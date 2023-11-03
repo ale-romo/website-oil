@@ -132,6 +132,16 @@ hr {
   font-size: 14px;
 }
 
+.row .col {
+&.light {
+  .regular-button {
+  &:hover {
+  background-color: $sand;
+         }
+    }
+   }
+  }
+  
 .regular-button, .nectar-button.large  {
   font-family: "PP-Telegraf";
   border-radius: 30px;
