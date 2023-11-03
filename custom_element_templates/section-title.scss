@@ -1,5 +1,9 @@
 @import '../vars';
 
+.row .col.light .section-title h4 {
+  color: $white;
+}
+
 .row .col .section-title {
   margin-bottom: 52px;
   .details {

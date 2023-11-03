@@ -55,6 +55,12 @@ body.material {
       margin-bottom: 150px;
     }
     &.slim-row {
+margin-bottom: 20px;
+      @media (min-width: $md) {
+        margin-bottom: 30px;
+      }
+    }
+    &.nomargin-row {
       margin-bottom: 0;
     }
     .wpb_row {
@@ -140,8 +146,8 @@ hr {
          }
     }
    }
-  }
-  
+}
+
 .regular-button, .nectar-button.large  {
   font-family: "PP-Telegraf";
   border-radius: 30px;
@@ -169,16 +175,16 @@ hr {
     transition: all 0.2s ease;
     position: relative;
   }
-  &:hover{
-    background-color: $bone;
+&:hover{
+background-color: $bone;
     //color: $bone;
-    &:after{
-      left: 2px;
-     // border: 1px solid $bone;
-      border-left: none;
-      border-bottom: none;
-    }
-  }
+&:after{
+  left: 2px;
+  // border: 1px solid $bone;
+  border-left: none;
+  border-bottom: none;
+}
+}
 }
 
 
