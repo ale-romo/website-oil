@@ -445,7 +445,8 @@ hr {
 @media (min-width: 1000px) {
   .row .col .card-gallery .vc_column-inner, .row .col .scenario-card-container .vc_column-inner, .row .col .service-card-container .vc_column-inner {
     width: 100%;
-    padding-left: 0;
+    margin-left: 0;
+    overflow: auto;
   }
 }
 .row .col .card-gallery .vc_column-inner .wpb_wrapper, .row .col .scenario-card-container .vc_column-inner .wpb_wrapper, .row .col .service-card-container .vc_column-inner .wpb_wrapper {
@@ -575,7 +576,8 @@ hr {
 @media (min-width: 1000px) {
   .row .col .card-gallery .vc_column-inner, .row .col .scenario-card-container .vc_column-inner, .row .col .service-card-container .vc_column-inner {
     width: 100%;
-    padding-left: 0;
+    margin-left: 0;
+    overflow: auto;
   }
 }
 .row .col .card-gallery .vc_column-inner .wpb_wrapper, .row .col .scenario-card-container .vc_column-inner .wpb_wrapper, .row .col .service-card-container .vc_column-inner .wpb_wrapper {
