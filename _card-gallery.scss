@@ -47,6 +47,8 @@
     @media (min-width: $md) {
       width: 100%;
       padding-left: 0;
+      margin-left: 0;
+      overflow: auto;
     }
     .wpb_wrapper {
       display: flex;

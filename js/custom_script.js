@@ -131,10 +131,21 @@ const animateLogo = () => {
     }
 };
 
+
+function addelements(){
+
+    //jQuery(".flickity-button").append('<div class="gallery-pn-btn"></div>');
+   // document.body.innerHTML += "<div id='circularcursor'></div>";
+
+
+}
+
+
+
 jQuery(document).ready(function () {
-    /* if(document.querySelector("#logo")) {
-       window.addEventListener('scroll', throttle(animateLogo, 150));
-    } */
+
+    addelements();
+
     if (document.querySelector('.flick-gallery')) {
         setGalleryUp('flick-gallery');
     }
@@ -147,4 +158,7 @@ jQuery(document).ready(function () {
     if (document.querySelector('.scenario-card') && window.innerWidth < 1000) {
         displayCounter('scenario-card');
     }
+
+
+
 });

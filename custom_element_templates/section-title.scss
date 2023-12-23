@@ -6,6 +6,11 @@
 
 .row .col .section-title {
   margin-bottom: 52px;
+
+  @media (max-width: $md) {
+   // margin-top: 52px;
+
+  }
   .details {
     color: $black;
   }

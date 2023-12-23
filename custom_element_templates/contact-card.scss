@@ -14,14 +14,20 @@
         width: 40%;
         margin-bottom: 50px;
         margin-left: 10%;
-        &:nth-child(2n) {
-         
+      }
+      @media (max-width: $md) {
+        .regular-button{
+          padding: .25em .7em .29em 0em !important;
         }
       }
+
       h3 {
         margin-bottom: 20px;
         @media (min-width: $md) {
           margin-bottom: 30px;
+        }
+        @media (max-width: $md) {
+          margin-bottom: 10px;
         }
       }
       p {

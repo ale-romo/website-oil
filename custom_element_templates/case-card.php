@@ -20,7 +20,7 @@ $image_srcset = wp_get_attachment_image_srcset($image_id);
 $image_src = wp_get_attachment_image_url($image_id, 'full');
 $link_obj = vc_build_link($link);
 
-echo '<div class="case-card">'.
+echo '<div class="case-card"><a href="'.$link_obj['url'].'" target="'.$link_obj['target'].'">'.
 ($title ? '<h2>'.$title.'</h2>' : '').
   '<hr class="hidden-md">'.
   ($image_id ? '<img class="'.$img_style.'" src="'. esc_url($image_src).'" srcset="' . esc_attr($image_srcset) .'" />' : '').
@@ -30,5 +30,5 @@ echo '<div class="case-card">'.
     ($slogan ? '<h4>'.$slogan.'</h4>' : '').
     ($description ? '<p class="visible-md">'.$description.'</p>' : '').
   '</div>'.
-  ($link ? '<a class="regular-button hidden-md" href="'.$link_obj['url'].'" target="'.$link_obj['target'].'">'.$link_obj['title'].'</a>' : '').
-'</div>';
+  ($link ? '<a class="regular-button" href="'.$link_obj['url'].'" target="'.$link_obj['target'].'">'.$link_obj['title'].'</a>' : '').
+'</a></div>';
