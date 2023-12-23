@@ -132,19 +132,7 @@ const animateLogo = () => {
 };
 
 
-function addelements(){
-
-    //jQuery(".flickity-button").append('<div class="gallery-pn-btn"></div>');
-   // document.body.innerHTML += "<div id='circularcursor'></div>";
-
-
-}
-
-
-
 jQuery(document).ready(function () {
-
-    addelements();
 
     if (document.querySelector('.flick-gallery')) {
         setGalleryUp('flick-gallery');
