@@ -1,5 +1,3 @@
-
-
 // Throttle and debouce for galleries
 
 function throttle(func, limit) {
@@ -129,10 +127,8 @@ const animateLogo = () => {
     }
 };
 
+
 jQuery(document).ready(function () {
-    if(document.querySelector("#logo")) {
-        window.addEventListener('scroll', throttle(animateLogo, 150));
-    }
     if (document.querySelector('.flick-gallery')) {
         setGalleryUp('flick-gallery');
     }
