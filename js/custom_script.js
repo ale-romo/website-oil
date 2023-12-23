@@ -1,5 +1,3 @@
-
-
 // Throttle and debouce for galleries
 
 function throttle(func, limit) {
@@ -62,8 +60,6 @@ const setGalleryUp = (galleryId) => {
 
         // Throttle the scroll event to run once every 300 milliseconds
         window.addEventListener('scroll', throttle(flickerImage, 150));
-
-
     } else if (galleryId === 'fade-gallery') {
         const handleMouseMove = throttle((event) => {
             const xPosition = event.clientX;
@@ -133,7 +129,6 @@ const animateLogo = () => {
 
 
 jQuery(document).ready(function () {
-
     if (document.querySelector('.flick-gallery')) {
         setGalleryUp('flick-gallery');
     }
@@ -146,7 +141,4 @@ jQuery(document).ready(function () {
     if (document.querySelector('.scenario-card') && window.innerWidth < 1000) {
         displayCounter('scenario-card');
     }
-
-
-
 });
