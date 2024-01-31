@@ -91,11 +91,13 @@ body[data-ext-responsive=true].single-post .container-wrap.no-sidebar .post-area
 body {
   cursor: url('cursors/c_circle.svg'), auto;
   a{
-    cursor: url('cursors/c_line.svg'), auto;
-  }
-  .flickity-prev-next-button, .flickity-enabled.is-draggable .flickity-viewport, #portfolio-nav #prev-link a, #portfolio-nav #next-link a  { 
     cursor: url('cursors/c_triangle.svg'), auto;
   }
+  .flickity-prev-next-button, .flickity-enabled.is-draggable .flickity-viewport, #portfolio-nav #prev-link a, #portfolio-nav #next-link a  { 
+    cursor: url('cursors/c_line.svg'), auto;
+  }
+
+  a{ color: $red;}
 }
 
 .wpb_wrapper > div {
@@ -171,10 +173,22 @@ ol, ul {
 }
 p {
   font-family: "EBGaramond";
-  padding-bottom: 0;
+  padding-bottom: 19px;
 }
 
+.bottom_controls #portfolio-nav .controls #next-link a:hover i:after, .bottom_controls #portfolio-nav .controls #prev-link a:hover i:after  {
+opacity: 0;
+}
+
+.sharing-default-minimal .nectar-love.loved, body .nectar-social[data-color-override="override"].fixed > a:before, body .nectar-social[data-color-override="override"].fixed .nectar-social-inner a, .sharing-default-minimal .nectar-social[data-color-override="override"] .nectar-social-inner a:hover, .nectar-social.vertical[data-color-override="override"] .nectar-social-inner a:hover {
+  background-color: $black;
+}
+
+
+
+
 //General
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "PP-Telegraf";
   line-height: 1em;
@@ -184,6 +198,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
   font-size: 46px;
+  padding-bottom: 9px;
   text-transform: uppercase;
   @media (min-width: $md) {
     font-size: 72px;
@@ -199,13 +214,14 @@ h3 {
 }
 
 h4 {
-  //text-transform: uppercase;
   line-height: 1em;
   font-size: 28px;
   @media (min-width: $md) {
     font-size: 36px;
   }
 }
+
+
 
 hr {
   border: none;
@@ -243,7 +259,27 @@ hr {
    }
 }
 
+.white-color{
+  h4{ color: $white !important; }
+}
+
+.controls a{
+  font-size: 14px;
+}
+
+.case-card, .service-card, .scenario-card{
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+#header-outer.dark-text #top nav >ul >li > a{
+  color: white !important;
+}
+
 .regular-button, .nectar-button {
+  position: relative;
   font-family: "PP-Telegraf";
   border-radius: 30px;
   color: $black;
@@ -252,10 +288,12 @@ hr {
   text-transform: uppercase;
   font-weight: normal;
   font-size: 20px;
-  padding: .25em .7em .29em .9em ;
-  transition: all 0.2s ease;
+  padding: .39em .7em .29em .9em ;
+  transition: all 0.1s ease;
 @media (min-width: $md) {
     font-size: 24px;
+     padding: .25em .7em .29em .9em ;
+    
   }
   &:after {
     content: '';
@@ -266,13 +304,14 @@ hr {
     border: solid 1px black;
     border-left: none;
     border-bottom: none;
-    transition: all 0.2s ease;
+    transition: all 0.1s ease;
     position: relative;
+    left: 0;
   }
   &:hover {
     background-color: $bone;
     &:after{
-      left: 2px;
+      left: 3px;
       border-left: none;
       border-bottom: none;
     }
@@ -315,7 +354,8 @@ hr {
   }
 }
 
-// IMAGE GALLERIES
+// Image Galleries 
+
 .flickity-viewport {
   overflow: hidden!important;
   margin-top: 0!important;
@@ -326,15 +366,19 @@ hr {
 }
 
 .row .col .flick-gallery img {
-  height: 150px;
+  height: 86px;
   width: auto;
   margin: 0 auto;
+  @media (min-width: $md) {
+    height: 150px;
+  }
 }
 
 .row .col .fade-gallery {
   position: relative;
+  top: -22px;
   img {
-    height: 80px;
+    height: 130px;
     width: auto;
     position: absolute;
     top: 0;
@@ -357,11 +401,141 @@ hr {
 
   &:hover{
     i{
-      color: $black;
+      color: $black !important;
     }
   }
   }
 
+}
+
+/* Initially, set margin-top to 0 for #ajax-content-wrap */
+#ajax-content-wrap {
+  margin-top: 0;
+  transition: margin-top 0.3s ease; /* Add a smooth transition effect */
+}
+
+
+
+
+
+
+//popups
+
+.popup-hover {
+    display: none;
+  @media (min-width: $md) {
+    display: block;
+    font-family: "PP-Telegraf";
+    font-size: 14px;
+    position: absolute;
+    background-color: $black;
+    color: $white;
+    padding: 3px 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.9); /* Initial minor scale */
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease; /* Include transform transition */
+    max-width: 200px;
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+
+    &.show-popup {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1); /* Hovered or show normal scale */
+    }
+  }
+}
+
+
+.no-overflow {
+  overflow: hidden;
+}
+
+//related case study
+
+.related-casestudy {
+  max-width: 211px;
+  background-color: $bone;
+  padding: 25px 25px;
+  border-radius: 40px;
+  p{
+    font-family: "PP Telegraf";
+  }
+  h4{
+    color: $gold;
+    font-size: 24px;
+  }
+  a{
+    color: $black;
+  }
+
+
+  .triangle-icon {
+    display: inline-block;
+    position: relative;
+    padding-left: 20px; /* Adjust the padding as needed */
+  }
+
+  .triangle-icon::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 30%; /* Adjust the vertical position as needed */
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid #635A4D; /* Adjust the size and color as needed */
+  }
+}
+
+// Services Side links 
+
+.services-links {
+  padding-left: 20px;
+
+  li {
+    list-style-type: none;
+    font-family: "PP Telegraf";
+    font-size: 28px;
+    color: $gold;
+    margin-bottom: 9px;
+
+    a {
+      display: block;
+      color: $gold;
+      position: relative;
+
+      &:hover {
+        color: $red;
+
+        &:after {
+         right: -5px;
+        }
+      }
+
+      &:after {
+        content: "";
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        transform: rotate(45deg);
+        border: solid 1px $gold;
+        border-left: none;
+        border-bottom: none;
+        transition: all 0.1s ease;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%) rotate(45deg);
+        margin-right: -5px; /* Adjust the value based on your preference */
+      }
+    }
+  }
 }
 
 // $md+  responsive layouts

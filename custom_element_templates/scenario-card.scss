@@ -2,11 +2,22 @@
 .scenario-card-container {
   @extend .card-gallery;
   .scenario-card {
+
+    .regular-button, .nectar-button{
+      &:hover{ 
+        color: $black;
+        &:after{
+          border-color: $black;
+        }
+      }
+    }
+
     @extend .card;
     > div {
       border: solid 1px $white;
       border-radius: 40px;
       padding: 54px 25px 28px 20px;
+      background-color: $black;
       display: flex;
       flex-grow: 1;
       flex-direction: column;

@@ -18,13 +18,13 @@ $image_src = wp_get_attachment_image_url($image_id, 'full');
 $link_obj = vc_build_link($link);
 
 echo '<div class="service-card">
-  <div>
-    <img src="'. esc_url($image_src).'" srcset="' . esc_attr($image_srcset) .'" />
-    <h4>'.$title.'</h4>
-    <hr>
-    <p>'.$description.'</p>
-    <div>
-      <a class="regular-button" href="'.$link_obj['url'].'" target="'.$link_obj['target'].'">'.$link_obj['title'].'</a>
-    </div>
-  </div>
-</div>';
+            <div>
+            <div class="popup-hover">goto: /'.$title.'</div>
+            <a href="'.$link_obj['url'].'" target="'.$link_obj['target'] .'">
+                <img src="'. esc_url($image_src).'" srcset="' . esc_attr($image_srcset) .'" />
+                <h4>'.$title.'</h4>
+                <hr>
+                <p>'.$description.'</p>
+              </a>
+            </div>       
+      </div>';
