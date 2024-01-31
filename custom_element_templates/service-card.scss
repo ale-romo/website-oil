@@ -4,8 +4,11 @@
 .service-card-container {
   @extend .card-gallery;
   .service-card {
+    a{  
+      color: $black;
+    }
     @extend .card;
-    > div {
+     > div {
       border: solid 1px $black;
       border-radius: 40px;
       padding: 54px 25px 28px 20px;
@@ -25,10 +28,15 @@
         height: 180px;
         width: auto;
         margin-bottom: 69px;
+        display: block; /* Ensures that the margin:auto works */
+        margin-left: auto;
+        margin-right: auto
       }
       div {
         margin-top: auto;
-        display: flex;
+        @media (min-width: $md) {
+          display: flex;
+        }
         justify-content: center;
       }
     }

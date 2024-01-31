@@ -19,6 +19,6 @@ echo '<div class="contact-card'.($hide_description_on_small ? ' hide-description
     <hr>
     <p>'.$description.'</p>
     <div>
-      <a class="regular-button" href="'.$link_obj['url'].'" target="'.$link_obj['target'].'">'.$link_obj['title'].'</a>
+      <a class="regular-button copyMe"><span class="copyContainer">'.$link_obj['title'].' </span><div class="popup-hover">clickto: /copy</div></a>
     </div>
 </div>';

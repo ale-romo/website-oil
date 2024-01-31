@@ -1,19 +1,21 @@
 @import '../vars';
+
 .contact-container {
-  .wpb_wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: -85px;
-    @media (min-width: $md) {
-      margin-bottom: -50px;
-    }
+    .wpb_wrapper {
+      //display: flex;
+      //flex-wrap: wrap;
+      //justify-content: end;
+      margin-bottom: -85px;
+      @media (min-width: $md) {
+        margin-bottom: -50px;
+      }
     .contact-card {
       width: 100%;
       margin-bottom: 85px;
       @media (min-width: $md) {
-        width: 40%;
-        margin-bottom: 50px;
-        margin-left: 10%;
+       // width: 40%;
+        margin-bottom: 90px;
+       // margin-left: 10%;
       }
           
       h3 {
@@ -23,9 +25,9 @@
         }
       }
       p {
-        margin-bottom: 50px;
+        margin-bottom: 9px;
         @media (min-width: $md) {
-          margin-bottom: 30px;
+          margin-bottom: 6px;
         }
       }
       &.hide-description {

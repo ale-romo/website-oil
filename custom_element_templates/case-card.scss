@@ -1,6 +1,15 @@
 @import '../vars';
 
 .row .col .case-card {
+
+  .regular-button{
+    @media (min-width: $md) {
+      display: none;
+    }
+  }
+
+  a{ color: $black;}
+
   margin-bottom: 84px;
   position: relative;
   &:last-child {
@@ -43,10 +52,11 @@
   }
 
   div {
-    display: flex;
+   
     flex-direction: column;
     @media (min-width: $md) {
       flex-direction: row;
+      display: flex;
     }
   }
 
@@ -59,7 +69,8 @@
     @media (min-width: $md) {
       display: block;
       position: absolute;
-      width: 80%;
+      width: 70%;
+      border-radius: 10px;
       height: auto;
       object-fit: fill;
       height: auto;
@@ -68,13 +79,19 @@
       left: 50%;
       transform: translate(-50%, -50%);
       pointer-events: none;
-      // transition: opacity 0.3s ease;
+      //transition: opacity 0.3s ease;
+      //animation: fadeInOut 2s ease-in-out infinite;
+
+     // transform: translateY(10px); /* Initial position slightly from the bottom */
+      transition: opacity 1s ease, transform 0.5s ease;
     }
   }
   &:hover {
     .hover_on_large {
+     
       @media (min-width: $md) {
-        opacity: 1;
+       opacity: 1;
+       transform: translate(-50%, -50%);       
       }
     }
   }

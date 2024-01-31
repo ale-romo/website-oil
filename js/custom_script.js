@@ -1,5 +1,3 @@
-// Throttle and debouce for galleries
-
 function throttle(func, limit) {
     let inThrottle;
     return function() {
@@ -23,9 +21,7 @@ function debounce(func, wait) {
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
     };
-};
-
-// Galleries
+}
 
 const setGalleryUp = (galleryId) => {
     const gallery = document.querySelector(`.${galleryId}`);
@@ -39,7 +35,7 @@ const setGalleryUp = (galleryId) => {
     // Appending galleryPics to newGallery
     galleryPics.forEach((pic, index) => {
         pic.classList = [];
-        if(index !== 0) {
+        if (index !== 0) {
             if (galleryId === 'flick-gallery') {
                 pic.style.display = 'none';  // Hide all images except the first one
             } else if (galleryId === 'fade-gallery') {
@@ -56,6 +52,9 @@ const setGalleryUp = (galleryId) => {
             galleryPics[currentIndex].style.display = 'none';
             currentIndex = (currentIndex + 1) % galleryPics.length;
             galleryPics[currentIndex].style.display = 'block';
+            // Get the filename of the current image
+            const filename = getFilenameFromSrc(galleryPics[currentIndex].src);
+            updateSectionTitle(filename);
         }
 
         // Throttle the scroll event to run once every 300 milliseconds
@@ -69,6 +68,9 @@ const setGalleryUp = (galleryId) => {
             galleryPics.forEach((img, index) => {
                 if (index === imgToShow) {
                     img.style.opacity = 1;
+                    // Get the filename of the current image
+                    const filename = getFilenameFromSrc(img.src);
+                    updateSectionTitle(filename);
                 } else {
                     img.style.opacity = 0;
                 }
@@ -78,7 +80,35 @@ const setGalleryUp = (galleryId) => {
         document.addEventListener('mousemove', handleMouseMove);
     }
 
+    // Function to extract filename from image source
+    const getFilenameFromSrc = (src) => {
+        const parts = src.split('/');
+        let filenameWithExtension = parts[parts.length - 1];
+        // Remove file extension
+        const filename = filenameWithExtension.replace(/\.[^/.]+$/, '');
+
+        // Replace "-" with whitespace
+        const filenameWithoutHyphens = filename.replace(/-/g, ' ');
+
+        // Remove numbers
+        const finalFilename = filenameWithoutHyphens.replace(/\d+/g, '');
+
+        return finalFilename;
+    };
+
+// Function to update the section title with only the first letter of each word in uppercase
+    const updateSectionTitle = (filename) => {
+        const sectionTitle = document.querySelector('.section-title-categories .section-title h5');
+        if (sectionTitle) {
+            const formattedFilename = filename.toLowerCase().replace(/\b\w/g, (char) => {
+                return char.toUpperCase();
+            });
+            sectionTitle.textContent = formattedFilename;
+        }
+    };
 }
+
+
 
 // Card container counters
 
@@ -111,24 +141,133 @@ const displayCounter = (cardType) => {
     container.addEventListener('scroll', handleScroll);
 }
 
-// Animate logo on scroll
-const animateLogo = () => {
-    const logo = document.querySelector("#logo");
-    // Define a scroll threshold, for example 200px
-    const threshold = 200;
+jQuery(document).ready(function ($) {
 
-    if (window.scrollY > threshold) {
-        // If we've scrolled more than the threshold, rotate the logo
-        logo.style.transition = 'transform .25s ease-in';
-        logo.style.transform = 'rotate(-90deg)'; // Adjust the rotation degree as needed
-    } else {
-        // If we're back above the threshold, reset the logo rotation
-        logo.style.transform = 'rotate(0deg)';
+    function updateAjaxContentWrap() {
+        var ajaxContentWrap = $('#ajax-content-wrap');
+        var mobileIcon = $('.slide-out-widget-area-toggle.mobile-icon.simple > div > a');
+        setTimeout(function() {
+            var isClosed = mobileIcon.hasClass('closed');
+            var isMenuPushOut = mobileIcon.hasClass('menu-push-out');
+            var isAtTop = $(window).scrollTop() === 0;
+            if (isAtTop) {
+                if (isClosed) {
+                    ajaxContentWrap.css('margin-top', '0');
+                } else if (isMenuPushOut) {
+                    ajaxContentWrap.css('margin-top', '140px');                
+                }
+            } else {
+                ajaxContentWrap.css('margin-top', '0');
+            }
+        }, 50); 
     }
-};
+    $('.slide-out-widget-area-toggle.mobile-icon.simple > div > a').on('click', updateAjaxContentWrap);
+    $(window).on('scroll', updateAjaxContentWrap);
+
+// Mouse handling for .case-card and .service-card div
+$('.case-card, .service-card div').on('mouseenter', function () {
+    const $popup = $(this).find('.popup-hover');
+    $popup.addClass('show-popup');
+    $('body').addClass('no-overflow');
+});
+
+$('.case-card, .service-card div').on('mousemove', function (e) {
+    const $popup = $(this).find('.popup-hover');
+    const offsetX = -($popup.width() / 2) - 50;
+    const offsetY = 10;
+
+    const x = Math.min(e.pageX - $(this).offset().left + offsetX, $(this).width() - $popup.width());
+    const y = e.pageY - $(this).offset().top + offsetY;
+
+    const middleX = x + $popup.width() / 2;
+    const bottomY = y + $popup.height();
+
+    $popup.css({
+        left: `${middleX}px`,
+        top: `${bottomY}px`
+    });
+});
+
+$('.case-card, .service-card div').on('mouseleave', function () {
+    const $popup = $(this).find('.popup-hover');
+    $popup.removeClass('show-popup');
+    $('body').removeClass('no-overflow');
+});
 
 
-jQuery(document).ready(function () {
+// Handling for .copyMe hover and click events
+$('.copyMe').on('mouseenter', function () {
+    const $popup = $(this).find('.popup-hover');
+    $popup.addClass('show-popup');
+    $('body').addClass('no-overflow');
+}).on('mousemove', function (e) {
+    const $popup = $(this).find('.popup-hover');
+    const offsetX = -($popup.width() / 2) - 50;
+    const offsetY = 10;
+
+    const x = Math.min(e.pageX - $(this).offset().left + offsetX, $(this).width() - $popup.width());
+    const y = e.pageY - $(this).offset().top + offsetY;
+
+    const middleX = x + $popup.width() / 2;
+    const bottomY = y + $popup.height();
+
+    $popup.css({
+        left: `${middleX}px`,
+        top: `${bottomY}px`
+    });
+}).on('mouseleave', function () {
+    const $popup = $(this).find('.popup-hover');
+    $popup.removeClass('show-popup');
+    $('body').removeClass('no-overflow');
+});
+
+// Handling for .copyMe click event
+$('.copyMe').on('click', function () {
+    var textToCopy = $(this).find('.copyContainer').text();
+    var $tempTextarea = $('<textarea>');
+    $('body').append($tempTextarea);
+    $tempTextarea.val(textToCopy).select();
+    document.execCommand('copy');
+    $tempTextarea.remove();
+
+    var copyPopup = $(this).find('.popup-hover');
+    var originalText = copyPopup.text();
+
+    copyPopup.text('Copied to clipboard');
+
+    setTimeout(function () {
+        copyPopup.text(originalText); // Reset the text back to the original
+        copyPopup.removeClass('show-popup'); // Ensure the popup is not shown after timeout
+    }, 1000);
+});
+
+
+
+const animatedCards = $('.case-card, .service-card, .scenario-card');
+const customOffset = 50; // Adjust this value as needed
+
+function isInViewport(element, offset) {
+    const rect = element[0].getBoundingClientRect();
+    return (
+        rect.top >= -offset &&
+        rect.top <= ($(window).height() || document.documentElement.clientHeight) + offset
+    );
+}
+
+function handleScroll() {
+    animatedCards.each(function() {
+        const animatedCard = $(this);
+        if (isInViewport(animatedCard, customOffset) && !animatedCard.hasClass('animated')) {
+            animatedCard.addClass('animated');
+            animatedCard.css({ opacity: 1, transform: 'translateY(0)' });
+        }
+    });
+}
+
+$(window).on('scroll', handleScroll);
+handleScroll(); // Check on page load
+
+
     if (document.querySelector('.flick-gallery')) {
         setGalleryUp('flick-gallery');
     }

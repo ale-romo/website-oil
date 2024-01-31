@@ -20,7 +20,7 @@ $image_srcset = wp_get_attachment_image_srcset($image_id);
 $image_src = wp_get_attachment_image_url($image_id, 'full');
 $link_obj = vc_build_link($link);
 
-echo '<div class="case-card"><a href="'.$link_obj['url'].'" target="'.$link_obj['target'].'">'.
+echo '<div class="case-card"><div class="popup-hover">goto: /'.$title.'</div><a href="'.$link_obj['url'].'" target="'.$link_obj['target'].'">'.
 ($title ? '<h2>'.$title.'</h2>' : '').
   '<hr class="hidden-md">'.
   ($image_id ? '<img class="'.$img_style.'" src="'. esc_url($image_src).'" srcset="' . esc_attr($image_srcset) .'" />' : '').
